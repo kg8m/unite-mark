@@ -96,7 +96,7 @@ function! s:get_mark_info(mark, curr_buf_name)
   else
     let l:buf_name = bufname(l:pos[0])
     let l:path = l:buf_name
-    let l:snippet = ''
+    let l:snippet = getbufline(l:pos[0], l:line)[0]
     let l:bufnr = l:pos[0]
   endif
   let l:mark_info = {
